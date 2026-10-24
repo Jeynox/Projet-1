@@ -26,18 +26,23 @@ php -S localhost:8080 deploy/router.php
 
 Puis ouvrir http://localhost:8080. Le routeur reproduit en local les règles de production (en-têtes de sécurité, accès interdit à `includes/`, `deploy/` et aux fichiers cachés).
 
-## Déploiement sur un VPS
+## Déploiement sur le VPS
 
-- **Nginx + PHP-FPM** : partir de `deploy/nginx.conf` (adapter `server_name`, `root` et la version de PHP).
-- **Apache** : le `.htaccess` à la racine applique les mêmes règles (`mod_headers` et `mod_rewrite` requis).
-- Activer le HTTPS (certbot) puis décommenter la ligne `Strict-Transport-Security`.
-- Envoyer les fichiers **sans** `.git`, `.env`, `deploy/`, etc. grâce à la liste d'exclusion :
+Le site est en ligne sur **https://wild-tour.daniellemosjose.fr**.
+
+- Conteneur Docker PHP 8.4 + Apache (`deploy/docker/`), en écoute sur `127.0.0.1:3200` uniquement.
+- Caddy sert de point d’entrée et gère le HTTPS (Let’s Encrypt, renouvellement automatique) : bloc dans `deploy/Caddyfile`, ajouté à `/etc/caddy/Caddyfile` sur le serveur.
+- Seuls les fichiers du site sont envoyés (`deploy/rsync-exclude.txt`) : jamais `.git`, `.env`, `deploy/` ni le README.
+
+Pour redéployer après une modification (depuis Git Bash, à la racine du projet) :
 
 ```bash
-rsync -avz --delete --exclude-from=deploy/rsync-exclude.txt ./ user@vps:/var/www/the-wild-tour/
+bash deploy/deploy.sh
 ```
 
-- Si un jour le site a besoin de secrets (SMTP…), copier `.env.example` en `.env` directement sur le serveur. Le `.env` n'est jamais versionné ni accessible depuis le web.
+Autres configurations possibles : `deploy/nginx.conf` (Nginx + PHP-FPM) ou le `.htaccess` (Apache classique).
+
+Si un jour le site a besoin de secrets (SMTP…), copier `.env.example` en `.env` directement sur le serveur. Le `.env` n’est jamais versionné ni accessible depuis le web.
 
 ## Sécurité
 

@@ -11,6 +11,13 @@ ServerSignature Off
 </FilesMatch>
 
 <IfModule mod_headers.c>
+    # Retire les en-têtes déjà posés par includes/security.php (pages PHP) pour éviter les doublons
+    Header unset Content-Security-Policy
+    Header unset X-Content-Type-Options
+    Header unset X-Frame-Options
+    Header unset Referrer-Policy
+    Header unset Permissions-Policy
+    Header unset Cross-Origin-Opener-Policy
     Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "DENY"

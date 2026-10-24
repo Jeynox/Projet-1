@@ -1,0 +1,13 @@
+# Déploiement sur le VPS (Docker rootless) : docker compose up -d --build
+services:
+  web:
+    build: .
+    image: wild-tour:prod
+    restart: unless-stopped
+    # Accessible uniquement en local : Caddy fait le HTTPS et transmet les requêtes
+    ports:
+      - "127.0.0.1:3200:80"
+    security_opt:
+      - no-new-privileges:true
+    mem_limit: 256m
+    pids_limit: 128
