@@ -1,0 +1,15 @@
+.git/
+.gitignore
+.gitattributes
+.env
+.env.*
+.vscode/
+.idea/
+.claude/
+deploy/
+README.md
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+desktop.ini

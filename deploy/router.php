@@ -4,7 +4,7 @@
 
 $path = rawurldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '/');
 
-if (preg_match('#(^|/)\.|^/(includes|deploy)/|\.md$#', $path)) {
+if (preg_match('#(^|/)\.|^/(includes|deploy)/|\.(md|log|bak|tmp|conf|ini|sql)$#i', $path)) {
     http_response_code(403);
     exit('Accès interdit');
 }

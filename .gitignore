@@ -1,0 +1,30 @@
+# Variables d'environnement et secrets (seul l'exemple est versionné)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Config locale des éditeurs et outils
+.vscode/
+.idea/
+.claude/
+*.code-workspace
+*.swp
+*~
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dépendances (si Composer ou npm sont ajoutés un jour)
+/vendor/
+node_modules/
+
+# Journaux, sessions PHP et fichiers temporaires
+*.log
+/logs/
+/sessions/
+*.tmp
+*.bak

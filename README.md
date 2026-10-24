@@ -31,6 +31,13 @@ Puis ouvrir http://localhost:8080. Le routeur reproduit en local les règles de 
 - **Nginx + PHP-FPM** : partir de `deploy/nginx.conf` (adapter `server_name`, `root` et la version de PHP).
 - **Apache** : le `.htaccess` à la racine applique les mêmes règles (`mod_headers` et `mod_rewrite` requis).
 - Activer le HTTPS (certbot) puis décommenter la ligne `Strict-Transport-Security`.
+- Envoyer les fichiers **sans** `.git`, `.env`, `deploy/`, etc. grâce à la liste d'exclusion :
+
+```bash
+rsync -avz --delete --exclude-from=deploy/rsync-exclude.txt ./ user@vps:/var/www/the-wild-tour/
+```
+
+- Si un jour le site a besoin de secrets (SMTP…), copier `.env.example` en `.env` directement sur le serveur. Le `.env` n'est jamais versionné ni accessible depuis le web.
 
 ## Sécurité
 

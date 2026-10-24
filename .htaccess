@@ -5,6 +5,11 @@ Options -Indexes
 DirectoryIndex index.html index.php
 ServerSignature Off
 
+# Fichiers sensibles bloqués même sans mod_rewrite
+<FilesMatch "^\.|\.(env|md|log|bak|tmp|conf|ini|sql)$">
+    Require all denied
+</FilesMatch>
+
 <IfModule mod_headers.c>
     Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
     Header always set X-Content-Type-Options "nosniff"
