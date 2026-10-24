@@ -1,0 +1,37 @@
+# Configuration Apache (si le VPS tourne sous Apache).
+# Pour Nginx, voir deploy/nginx.conf.
+
+Options -Indexes
+DirectoryIndex index.html index.php
+ServerSignature Off
+
+<IfModule mod_headers.c>
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    # À activer une fois le HTTPS en place :
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header unset X-Powered-By
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Bloque les fichiers et dossiers cachés (.git, .vscode, .claude...)
+    RewriteRule (^|/)\. - [F,L]
+    # Bloque l'accès direct aux fichiers inclus et à la config de déploiement
+    RewriteRule ^(includes|deploy)/ - [F,L]
+    RewriteRule \.md$ - [F,L]
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/avif "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

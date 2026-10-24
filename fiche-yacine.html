@@ -1,153 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shogun Sushi, le premier restaurant japonais de Chartres.">
+    <title>Gastronomie — Shogun Sushi, Chartres — The Wild Tour</title>
+    <link rel="icon" href="assets-daniel/logo-the-wild-tour-navbar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700;1,800&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <title>The Wild Tour</title>
+    <script src="main.js" defer></script>
 </head>
-<body>
-    <header class="centrer">
-        <nav class="navbar">
-            <img src="/assets-daniel/logo-the-wild-tour-navbar.png" alt="logo" class="logo">
-            <ul class="list-general">
-                <li class="listeN"><a href="acceuil.html">Accueil</a></li>
-                <li class="listeN"><a href="contact.php">Contact</a></li>
-                <li class="listeN"><a href="decouvertes.php">Découvertes</a><span class="listeN-pointer">&#9660;</span>
-                    <ul class="sousMenu">
-                        <li class="sousListe"><a href="fiche-yacine.html">Gastronomie</a></li>
-                        <li class="sousListe"><a href="fiche-daniel.html">Sport</a></li>
-                        <li class="sousListe"><a href="fiche-julien.php">Art</a></li>
-                        <li class="sousListe"><a href="fiche-stephV.html">Ecologie</a></li>
-                        <li class="sousListe"><a href="fiche_stephM.html">Nature</a></li>
+<body class="page-fiche">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="accueil.html" class="navbar__brand"><img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" class="navbar__logo" width="219" height="100"></a>
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu"><span></span></button>
+            <ul class="navbar__menu" id="nav-menu">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li class="has-dropdown">
+                    <a href="decouvertes.php">Découvertes</a>
+                    <button class="dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Afficher les catégories"></button>
+                    <ul class="dropdown" id="nav-dropdown">
+                        <li><a href="fiche-yacine.html" aria-current="page">Gastronomie</a></li>
+                        <li><a href="fiche-daniel.html">Sport</a></li>
+                        <li><a href="fiche-julien.php">Art</a></li>
+                        <li><a href="fiche-stephV.html">Écologie</a></li>
+                        <li><a href="fiche_stephM.html">Nature</a></li>
                     </ul>
                 </li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
-            <div id="icons"></div>
         </nav>
     </header>
-    <main>
-        <!--Image principale top et titre -->
-        <section>
-            <h1 class="title-top">Gastronomie</h1>
-            <div>
-                <img class="img-top" src="/assets-yacine/pexels-cats-coming-1907229.jpg">
+
+    <main id="contenu">
+        <section class="hero">
+            <img class="hero__img" src="assets-yacine/pexels-cats-coming-1907229.jpg" alt="">
+            <div class="hero__content">
+                <p class="eyebrow">Gastronomie · Chartres</p>
+                <h1 class="hero__title">Gastronomie</h1>
+                <div class="hero__meta">
+                    <img src="assets-yacine/yacine.jpg" alt="">
+                    <span>Par Yacine M.</span>
+                </div>
             </div>
         </section>
-      <article class="texte-yacine">
-        <!--Partie paragraphe a centrer selon la disposition que l'on souhaite-->
 
-        <span class="image-sushi"></span>
-        <p class="contenu-yacine">
-          Restaurant japonais Situé en plein cœur de Chartres, ce restaurant
-          vous propose de découvrir la cuisine japonaise dans un cadre
-          typiquement nippon. Ouvert en 2001, SHOGUN Sushi est le premier
-          restaurant japonais de la ville de Chartres. Le chef vous propose une
-          carte mêlant mets traditionnels japonais et recettes innovantes de
-          sushi et maki. Venez également découvrir leurs délicieux desserts
-          japonais. Ce restaurant a pour particularité de disposer d'une salle
-          traditionnelle dans laquelle vous pourrez manger assis sur des
-          coussins. Leurs plats peuvent aussi être emportés ou livrés à votre
-          domicile et bureau. Toute l'équipe du Shogun Sushi est à votre
-          disposition pour vous faire passer un agréable moment.
-        </p>
-      </article>
+        <section class="section">
+            <div class="container">
+                <div class="split split--accent reveal">
+                    <div class="split__media">
+                        <img src="assets-yacine/pexels-airam-datoon-9424914.jpg" alt="Sushi au thon servi sur une pierre" loading="lazy">
+                    </div>
+                    <div class="split__text">
+                        <p class="eyebrow">Restaurant japonais</p>
+                        <h2>Shogun Sushi</h2>
+                        <p>Situé en plein cœur de Chartres, ce restaurant vous propose de découvrir la cuisine japonaise dans un cadre typiquement nippon. Ouvert en 2001, Shogun Sushi est le premier restaurant japonais de la ville.</p>
+                        <p>Le chef vous propose une carte mêlant mets traditionnels japonais et recettes innovantes de sushis et makis. Venez également découvrir leurs délicieux desserts japonais.</p>
+                    </div>
+                </div>
 
-         <!-- Articles de la même catégorie -->
+                <div class="split split--reverse reveal">
+                    <div class="split__media">
+                        <img src="assets-yacine/salle_arriere.jpg" alt="Salle traditionnelle japonaise avec tables basses et coussins" loading="lazy">
+                    </div>
+                    <div class="split__text">
+                        <p class="eyebrow">Une salle traditionnelle</p>
+                        <h2>Assis sur des coussins</h2>
+                        <p>Ce restaurant a pour particularité de disposer d’une salle traditionnelle dans laquelle vous pourrez manger assis sur des coussins. Les plats peuvent aussi être emportés ou livrés à votre domicile et au bureau.</p>
+                        <p>Toute l’équipe du Shogun Sushi est à votre disposition pour vous faire passer un agréable moment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-         <section class="centrer">
-          <h3 class="card__h3">Articles de la même catégorie</h3>
-          <div class="container">
-              <div class="card">
-                  <div class="card__header">
-                      <img src="assets-yacine/pexels-geraud-pfeiffer-6605642.jpg" alt="card__image" class="card__image"
-                          width="600">
-                  </div>
-                  <div class="card__body">
-                      <h4>Les differentes maniere de cuisiner de la viande</h4>
-                      <p>Nous allons parler des différentes manières de cuisiner la viande, un sujet qui a toujours été au cœur de nombreuses cultures gastronomiques à travers le monde.
-                        Il existe de nombreuses manières de cuisiner la viande, chacune apportant sa propre touche de saveur et de texture. Que vous aimiez la viande saignante, à point ou bien cuite, vous avez l'embarras du choix pour créer des plats …
-                        </p>
-                      <a class="card__button" href="">Lire plus...</a>
-                  </div>
-                  <div class="card__footer">
-                      <div class="user">
-                          <img src="assets-yacine/yacine.jpg" alt="user__image" class="user__image">
-                          <div class="user__info">
-                            <h5>MENNAA Yacine</h5>
-                              <small></small>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="card__header">
-                      <img src="assets-yacine/pexels-roman-odintsov-4553031.jpg" alt="card__image" class="card__image" width="600">
-                  </div>
-                  <div class="card__body">
+        <section class="section section--sable">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Continuer la lecture</p>
+                    <h2 class="section-title">À découvrir aussi</h2>
+                </div>
+                <div class="cards">
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-daniel/pexels-cottonbro-studio-4828253.jpg" alt="" loading="lazy">
+            <span class="card__tag">Sport</span>
+        </div>
+        <div class="card__body">
+            <h3>La pêche dans l’Aube</h3>
+            <p>Sensibilisation, journées dépollution et pêche « no kill » : la pêche, sport national de l’Aube.</p>
+            <a class="link-arrow" href="fiche-daniel.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-daniel/IMG_1713.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Daniel L.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-julien/IMG_4002.jpg" alt="" loading="lazy">
+            <span class="card__tag">Art</span>
+        </div>
+        <div class="card__body">
+            <h3>Base sous-marine, Bordeaux</h3>
+            <p>Un voyage dans la région bordelaise à travers ses secrets, son histoire, son art et son architecture.</p>
+            <a class="link-arrow" href="fiche-julien.php">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-julien/profil-julien.prv-instagram.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Julien</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-daniel/chris-abney-gvb84QdErNs-unsplash.jpg" alt="" loading="lazy">
+            <span class="card__tag">Écologie</span>
+        </div>
+        <div class="card__body">
+            <h3>Le Libournais écoresponsable</h3>
+            <p>Un tour d’horizon libournais des acteurs qui réparent, recyclent et revalorisent au quotidien.</p>
+            <a class="link-arrow" href="fiche-stephV.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <span class="avatar" aria-hidden="true">SV</span>
+            <span>Stéphanie V.</span>
+        </div>
+    </article>
+</div>
+            </div>
+        </section>
 
-                      <h4>Le petit dejeuner equilibré parfait pour la santé</h4>
-                      <p>L'objectif d'un petit déjeuner équilibré est de combiner des glucides complexes, des protéines, des graisses saines et des fibres pour vous donner l'énergie nécessaire tout en vous maintenant rassasié jusqu'au prochain repas …</p>
-                      <a class="card__button">Lire plus...</a>
-                  </div>
-                  <div class="card__footer">
-                      <div class="user">
-                          <img src="assets-yacine/yacine.jpg" alt="user__image" class="user__image">
-                          <div class="user__info">
-                            <h5>MENNAA Yacine</h5>
-                              <small>Yesterday</small>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="card">
-                  <div class="card__header">
-                      <img src="assets-yacine/pexels-nataliya-vaitkevich-5792329.jpg" alt="card__image" class="card__image" width="600">
-                  </div>
-                  <div class="card__body">
-                      <h4>La gastronomie italienne</h4>
-                      <p>La cuisine italienne se caractérise également par l'importance accordée à la fraîcheur des ingrédients et à la saisonnalité. Les Italiens privilégient les produits locaux et de saison pour préparer leurs plats. En fin de compte, la simplicité, la passion pour la cuisine et la convivialité sont au cœur de la gastronomie italienne, faisant de chaque repas une expérience mémorable. Buon appetito !</p>
-                      <a class="card__button" href="">Lire plus...</a>
-                  </div>
-                  <div class="card__footer">
-                      <div class="user">
-                          <img src="assets-yacine/yacine.jpg" alt="user__image" class="user__image">
-                          <div class="user__info">
-                              <h5>MENNAA Yacine</h5>
-                              <small>2d ago</small>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </section>
     </main>
 
-    <footer>
-        <div class="footer-central">
-            <div class="logo">
-                <img src="/assets-daniel/logo-the-wild-tour-navbar.png" alt="" width="150">
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" width="150" height="68" loading="lazy">
+                <p>Le blog des bonnes adresses des Wilders, région par région.</p>
             </div>
-            <div class="menssions">
-                <p>Mentions légales <br>
-                Plolitique de confidentialité <br>
-                Conditions d'utilisation</p>
+            <div class="site-footer__col">
+                <h2>Le site</h2>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="decouvertes.php">Découvertes</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
             </div>
-            <div class="blog">
-                <p>A propos <br>
-                Blog</p>
+            <div class="site-footer__col">
+                <h2>Informations</h2>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>Politique de confidentialité</li>
+                    <li>Conditions d'utilisation</li>
+                </ul>
             </div>
         </div>
-        <div class="bas-footer">
-            <p>Boullevard des regions, 96000 WildLand</p>
-        </div>
+        <p class="site-footer__bottom">Boulevard des Régions, 96000 WildLand · © <span data-year>2023</span> The Wild Tour — Starting Code</p>
     </footer>
-    <script src="includes/menu-burger-mobile/menu-burger-mobile.js"></script>
-  </body>
+</body>
 </html>

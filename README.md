@@ -15,3 +15,25 @@ ps je l'ai fait que sur l'acceuil.html histoire de tester :D
 + Ajout de la parti note (a travailler)
 
 27/09/2023 : Finalisation de la page Daniel
+
+## Lancer le site en local
+
+Aucune dépendance à installer : HTML/CSS/JS + PHP 8 (pour `contact.php` et `decouvertes.php`).
+
+```bash
+php -S localhost:8080 deploy/router.php
+```
+
+Puis ouvrir http://localhost:8080. Le routeur reproduit en local les règles de production (en-têtes de sécurité, accès interdit à `includes/`, `deploy/` et aux fichiers cachés).
+
+## Déploiement sur un VPS
+
+- **Nginx + PHP-FPM** : partir de `deploy/nginx.conf` (adapter `server_name`, `root` et la version de PHP).
+- **Apache** : le `.htaccess` à la racine applique les mêmes règles (`mod_headers` et `mod_rewrite` requis).
+- Activer le HTTPS (certbot) puis décommenter la ligne `Strict-Transport-Security`.
+
+## Sécurité
+
+- Content-Security-Policy stricte (aucun script ni style inline), `X-Frame-Options`, `nosniff`, `Referrer-Policy`, `Permissions-Policy`.
+- Formulaire de contact : jeton CSRF, champ pot de miel, limite d'une soumission toutes les 30 s, validation et longueur maximale de chaque champ, échappement de toutes les valeurs réaffichées, redirection après envoi (PRG). Le message n'est envoyé nulle part (site vitrine).
+- Cookie de session `HttpOnly` + `SameSite=Strict` (+ `Secure` en HTTPS).

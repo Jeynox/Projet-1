@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le blog des bonnes adresses des Wilders : gastronomie, sport, art, écologie et nature, région par région.">
+    <title>Accueil — The Wild Tour</title>
+    <link rel="icon" href="assets-daniel/logo-the-wild-tour-navbar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="page-accueil">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="accueil.html" class="navbar__brand"><img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" class="navbar__logo" width="219" height="100"></a>
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu"><span></span></button>
+            <ul class="navbar__menu" id="nav-menu">
+                <li><a href="accueil.html" aria-current="page">Accueil</a></li>
+                <li class="has-dropdown">
+                    <a href="decouvertes.php">Découvertes</a>
+                    <button class="dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Afficher les catégories"></button>
+                    <ul class="dropdown" id="nav-dropdown">
+                        <li><a href="fiche-yacine.html">Gastronomie</a></li>
+                        <li><a href="fiche-daniel.html">Sport</a></li>
+                        <li><a href="fiche-julien.php">Art</a></li>
+                        <li><a href="fiche-stephV.html">Écologie</a></li>
+                        <li><a href="fiche_stephM.html">Nature</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenu">
+        <section class="hero">
+            <img class="hero__img" src="assets-julien/image-accueil.jpg" alt="">
+            <div class="hero__content">
+                <p class="eyebrow">The Wild Tour</p>
+                <h1 class="hero__title">Accueil</h1>
+                <p class="hero__lead">Les bonnes adresses et les plus beaux endroits de nos régions, racontés par les Wilders.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container intro reveal">
+                <h2>Bienvenue</h2>
+                <hr class="divider">
+                <p>Soyez les bienvenus sur « The Wild Tour ». Ce blog réunit les bonnes adresses et les meilleurs endroits que chaque Wilder a dénichés dans sa région ou son département. Feuilletez les articles et, si l’un d’eux vous plaît, on vous conseille vivement d’aller y faire un tour&nbsp;!</p>
+            </div>
+        </section>
+
+        <section class="section section--sable">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">À la une</p>
+                    <h2 class="section-title">Articles récents</h2>
+                </div>
+                <div class="cards">
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-categories/categorie-nature.jpg" alt="" loading="lazy">
+            <span class="card__tag">Nature</span>
+        </div>
+        <div class="card__body">
+            <h3>Les Sables d’Olonne</h3>
+            <p>La beauté d’une ville balnéaire de la côte atlantique, entre forêt domaniale, dunes et plages.</p>
+            <a class="link-arrow" href="fiche_stephM.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <span class="avatar" aria-hidden="true">SM</span>
+            <span>Stéphanie M.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-yacine/ai-generated-7955585_1920.jpg" alt="" loading="lazy">
+            <span class="card__tag">Gastronomie</span>
+        </div>
+        <div class="card__body">
+            <h3>Shogun Sushi, Chartres</h3>
+            <p>Le premier restaurant japonais de Chartres : sushis, makis et salle traditionnelle où l’on mange assis sur des coussins.</p>
+            <a class="link-arrow" href="fiche-yacine.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-yacine/yacine.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Yacine M.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-daniel/chris-abney-gvb84QdErNs-unsplash.jpg" alt="" loading="lazy">
+            <span class="card__tag">Écologie</span>
+        </div>
+        <div class="card__body">
+            <h3>Le Libournais écoresponsable</h3>
+            <p>Un tour d’horizon libournais des acteurs qui réparent, recyclent et revalorisent au quotidien.</p>
+            <a class="link-arrow" href="fiche-stephV.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <span class="avatar" aria-hidden="true">SV</span>
+            <span>Stéphanie V.</span>
+        </div>
+    </article>
+</div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-head section-head--left reveal">
+                    <p class="eyebrow">Sélection</p>
+                    <h2 class="section-title">Les articles de la semaine</h2>
+                    <hr class="divider">
+                </div>
+                <div class="features">
+                    <article class="feature reveal">
+                        <div class="feature__media">
+                            <img src="assets-daniel/pexels-cottonbro-studio-4828253.jpg" alt="Pêcheur lançant sa ligne au bord d’une rivière" loading="lazy">
+                        </div>
+                        <div class="feature__body">
+                            <p class="eyebrow">Sport · Aube</p>
+                            <h3>La pêche dans l’Aube</h3>
+                            <p>Un article sur la pêche dans l’Aube et ses environs : sensibilisation à l’environnement, pêche « no kill » et journées dépollution des plans d’eau.</p>
+                            <a class="btn" href="fiche-daniel.html">Lire l’article</a>
+                        </div>
+                    </article>
+                    <article class="feature reveal">
+                        <div class="feature__media">
+                            <img src="assets-julien/IMG_4002.jpg" alt="Intérieur de la Base sous-marine de Bordeaux" loading="lazy">
+                        </div>
+                        <div class="feature__body">
+                            <p class="eyebrow">Art · Bordeaux</p>
+                            <h3>Base sous-marine, Bordeaux</h3>
+                            <p>Cet article vous fera voyager dans la région bordelaise avec ses secrets, ses histoires ainsi que son art et son architecture.</p>
+                            <a class="btn" href="fiche-julien.php">Lire l’article</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" width="150" height="68" loading="lazy">
+                <p>Le blog des bonnes adresses des Wilders, région par région.</p>
+            </div>
+            <div class="site-footer__col">
+                <h2>Le site</h2>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="decouvertes.php">Découvertes</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__col">
+                <h2>Informations</h2>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>Politique de confidentialité</li>
+                    <li>Conditions d'utilisation</li>
+                </ul>
+            </div>
+        </div>
+        <p class="site-footer__bottom">Boulevard des Régions, 96000 WildLand · © <span data-year>2023</span> The Wild Tour — Starting Code</p>
+    </footer>
+</body>
+</html>

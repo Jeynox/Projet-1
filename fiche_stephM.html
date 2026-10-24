@@ -1,171 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre forêt domaniale, plages et Vendée Globe : balade nature aux Sables d’Olonne.">
+    <title>Nature — Les Sables d’Olonne — The Wild Tour</title>
+    <link rel="icon" href="assets-daniel/logo-the-wild-tour-navbar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700;1,800&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="includes/cards/card.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <title>The Wild Tour</title>
+    <script src="main.js" defer></script>
 </head>
-<body>
-    <header class="centrer">
-        <nav class="navbar">
-            <img src="/assets-daniel/logo-the-wild-tour-navbar.png" alt="logo" class="logo">
-            <ul class="list-general">
-                <li class="listeN"><a href="acceuil.html">Accueil</a></li>
-                <li class="listeN"><a href="contact.php">Contact</a></li>
-                <li class="listeN"><a href="decouvertes.php">Découvertes</a><span class="listeN-pointer">&#9660;</span>
-                    <ul class="sousMenu">
-                        <li class="sousListe"><a href="fiche-yacine.html">Gastronomie</a></li>
-                        <li class="sousListe"><a href="fiche-daniel.html">Sport</a></li>
-                        <li class="sousListe"><a href="fiche-julien.php">Art</a></li>
-                        <li class="sousListe"><a href="fiche-stephV.html">Ecologie</a></li>
-                        <li class="sousListe"><a href="fiche_stephM.html">Nature</a></li>
+<body class="page-fiche">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="accueil.html" class="navbar__brand"><img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" class="navbar__logo" width="219" height="100"></a>
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu"><span></span></button>
+            <ul class="navbar__menu" id="nav-menu">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li class="has-dropdown">
+                    <a href="decouvertes.php">Découvertes</a>
+                    <button class="dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Afficher les catégories"></button>
+                    <ul class="dropdown" id="nav-dropdown">
+                        <li><a href="fiche-yacine.html">Gastronomie</a></li>
+                        <li><a href="fiche-daniel.html">Sport</a></li>
+                        <li><a href="fiche-julien.php">Art</a></li>
+                        <li><a href="fiche-stephV.html">Écologie</a></li>
+                        <li><a href="fiche_stephM.html" aria-current="page">Nature</a></li>
                     </ul>
                 </li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
-            <div id="icons"></div>
         </nav>
     </header>
-    <main>
-        <!--Image principale top et titre -->
-        <section>
-            <h1 class="title-top">Nature</h1>
-            <div>
-                <img class="img-top" src="/assets-stephM/couché-de-soleil-plage.jpg">
+
+    <main id="contenu">
+        <section class="hero">
+            <img class="hero__img" src="assets-categories/categorie-nature.jpg" alt="">
+            <div class="hero__content">
+                <p class="eyebrow">Nature · Vendée</p>
+                <h1 class="hero__title">Nature</h1>
+                <div class="hero__meta">
+                    <span class="avatar" aria-hidden="true">SM</span>
+                    <span>Par Stéphanie M.</span>
+                </div>
             </div>
         </section>
-        <section class="texte-stephm">
-            <!--Partie paragraphe a centrer selon la disposition que l'on souhaite-->
-            
-            <p1>
-                Je vous emmène avec moi dans l’ouest de la France, sur la côte Vendéenne, où se situe la ville balnéaire des Sables d’Olonne. <br/>Avec ses 8 607 hectares, ce territoire nous offre différents paysages à contempler, de quoi contenter les amoureux de la nature. En raison de l’influence maritime avec son micro-climat, les hivers sont doux avec peu de gelées et les étés sont moins brulantes que dans les terres.
-            </p1>
-                <div class="img1stephm"></div>
-            <p2>
-                Commençons notre tour par la forêt domaniale d’Olonne. Elle s’étend au bord du littoral atlantique sur 11 km de longueur et sa largeur varie entre 200 m et 2500 m avec une superficie de 1120 hectares où y vivent de nombreuses espèces animales comme des chevreuils, sangliers, écureuils, lézards, vipères ainsi qu’un très grand nombre d’oiseaux de différents types. <bd/>
-                Certaines zones sont constituées de dunes boisées qui ont pour but de protéger les terres, les villages et les marais salants lors des tempêtes de sable. <br/> Véritable petit coin de paradis entre plage et verdure.
-            </p2>
-               <div class="img2stephm"></div>
-            <p3>
-                Si nous continuons notre balade en forêt, direction ouest, nous tomberons progressivement sur la plage et le bord de mer avec cette odeur iodée caractéristique. <br/>
-                La commune des Sables d’Olonne possède, pas moins de cinq grandes plages bordent le littoral de la côte de lumière pour goûter à la plénitude d’instants ensoleillés ! Nous pouvons goûter aux plages de sable fin ou explorer les côtes sauvages du bord de mer. Attention tout de même aux grandes marrais et aux vents violent car quand l’océan se déchaine on peut certes y découvrir de beaux paysages mais gare aux risques encourus aux aventuriers voulant immortaliser ce spectacle.            
-            </p3>
-                <div class="img3stephm"></div>
-            <p4>
-                Nous ne pouvons pas faire le tour d’horizon de la ville sans parler du mythique Vendée Globe qui à pour point de départ et d’arrivé le port des Sables d’Olonne. Célèbre course autour du monde à la voile en solitaire, sans escale et sans assistance. Elle a lieu tous les 4 ans depuis 1989 où une douzaine de skippeurs batailles jours et nuit pendants environ 3 mois pour franchir la ligne d’arrivée.<br/> Une épreuve de force, tant physique que moral.
-            </p4>
-                <div class="img4stephm"></div>
 
+        <section class="section">
+            <div class="container section-head reveal">
+                <p class="eyebrow">Côte de Lumière</p>
+                <h2 class="section-title">Les Sables d’Olonne</h2>
+                <hr class="divider">
+                <p>Je vous emmène avec moi dans l’ouest de la France, sur la côte vendéenne, où se situe la ville balnéaire des Sables d’Olonne. Avec ses 8&nbsp;607 hectares, ce territoire offre différents paysages à contempler, de quoi combler les amoureux de la nature. Grâce à l’influence maritime et à son microclimat, les hivers sont doux, avec peu de gelées, et les étés moins brûlants que dans les terres.</p>
             </div>
         </section>
-         <section class="cards-stephm">
-                    <div class="card1"></div>
-                    <div class="card2"></div>
-                    <div class="card3"></div>
-                    <div class="card4"></div>
-        </section>
-            <section class="presentation-stephm">
-                Cet article à été écrit et présenté par la wileuse Stéphanie Meyer. <br/> Je vis dans ce cadre paradisiaque qui se situe à quelques dizaines de kilomètre de chez moi mais originaire de Strasbourg, je suis actuellement en formation pour devenir Développeuse Web. 
-                J'ai donc crée cette page Web et ce site avec l'aide de mes coéquipiers les "Starting Code".<br/> <br/>
-                Pour vous montrer où se trouve les Sables d'Olonne, regardez sur la droite, la petite carte de France vous l'indiquera avec le point rouge. 
-                    <div class="card5"></div>
-            </section>
-        </main>
-                <!-- Articles de la même catégorie -->
 
-                <section class="centrer">
-                    <h3 class="card__h3">Articles du même auteur</h3>
-                    <div class="container">
-                        <div class="card">
-                            <div class="card__header">
-                                <img src="\assets-stephM\ob_65d955_cayola-talmont-saint-hilaire.jpg"alt="card__image" class="card__image"
-                                    width="600">
-                            </div>
-                            <div class="card__body">
-                                <h4>Les côtes sauvage de Vendée</h4>
-                                <p>Le litoral regorge de plages et de bord de mer en tout genre. Parlons aujourd'hui des côtes sauvages Vendéennes.</p>
-                                <a class="card__button" href="">Lire plus...</a>
-                            </div>
-                            <div class="card__footer">
-                                <div class="user">
-                                    <img src="/assets-stephM/IMG_8704.JPEG" alt="user__image" class="user__image">
-                                    <div class="user__info">
-                                        <h5>Stephanie M.</h5>
-                                        <small></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__header">
-                                <img src="/assets-stephM/istockphoto-1172051173-612x612.jpg" alt="card__image" class="card__image" width="600">
-                            </div>
-                            <div class="card__body">
-        
-                                <h4>Le bord de mer et ses humeurs</h4>
-                                <p>Tantôt ensoleillé, tantôt venteux avec marée basse ou marée haute, l'océan nous offre une magnifique palette coloré de paysages différents.</p>
-                                <a class="card__button">Lire plus...</a>
-                            </div>
-                            <div class="card__footer">
-                                <div class="user">
-                                    <img src="/assets-stephM/IMG_8704.JPEG" alt="user__image" class="user__image">
-                                    <div class="user__info">
-                                        <h5>Stephanie M.</h5>
-                                        <small></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card__header">
-                                <img src="\assets-stephM\Forêt_domaniale_d_Olonne_(panneau).jpg" alt="card__image" class="card__image" width="600">
-                            </div>
-                            <div class="card__body">
-                                <h4>La forêt domaniale d'Olonne</h4>
-                                <p>Véritable petite bulle de nature et de sérénité, je vous propose de découvrir en détail cet univers entre sable, verdure et animaux de la forêt.</p>
-                                <a class="card__button" href="">Lire plus...</a>
-                            </div>
-                            <div class="card__footer">
-                                <div class="user">
-                                    <img src="/assets-stephM/IMG_8704.JPEG" alt="user__image" class="user__image">
-                                    <div class="user__info">
-                                        <h5>Stephanie M.</h5>
-                                        <small></small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <section class="section section--sable">
+            <div class="container">
+                <div class="split reveal">
+                    <div class="split__text">
+                        <p class="eyebrow">Première étape</p>
+                        <h2>La forêt domaniale d’Olonne</h2>
+                        <p>Commençons notre tour par la forêt domaniale d’Olonne. Elle s’étend au bord du littoral atlantique sur 11 km de long, pour une largeur de 200 à 2&nbsp;500 m et une superficie de 1&nbsp;120 hectares. Y vivent de nombreuses espèces&nbsp;: chevreuils, sangliers, écureuils, lézards, vipères et un très grand nombre d’oiseaux.</p>
+                        <p>Certaines zones sont constituées de dunes boisées qui protègent les terres, les villages et les marais salants lors des tempêtes de sable. Un véritable petit coin de paradis entre plage et verdure.</p>
                     </div>
-                </section>
-                </main>
-        </body>
+                    <div class="split__media">
+                        <img src="assets-daniel/taylor-r-clkI9_xcuis-unsplash.jpg" alt="Sous-bois verdoyant au bord de l’eau" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="split split--reverse split--accent reveal">
+                    <div class="split__text">
+                        <p class="eyebrow">Deuxième étape</p>
+                        <h2>Plages et bord de mer</h2>
+                        <p>En continuant la balade vers l’ouest, on rejoint progressivement la plage et le bord de mer, avec cette odeur iodée caractéristique. Pas moins de cinq grandes plages bordent le littoral de la Côte de Lumière pour goûter à la plénitude d’instants ensoleillés&nbsp;: sable fin ou côtes sauvages, à vous de choisir.</p>
+                        <p>Attention tout de même aux grandes marées et aux vents violents&nbsp;: quand l’océan se déchaîne, le spectacle est superbe, mais gare aux risques pour les aventuriers qui veulent l’immortaliser.</p>
+                    </div>
+                    <div class="split__media">
+                        <img src="assets-daniel/pure-julia-B8y6uvTnEvU-unsplash.jpg" alt="Galets et eau claire sur le rivage" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <figure class="wide-figure reveal">
+            <img src="assets-daniel/pexels-johannes-plenio-1105386.jpg" alt="Petit bateau seul au milieu d’une mer brumeuse" loading="lazy">
+            <figcaption>Le Vendée Globe : le tour du monde à la voile, en solitaire, sans escale et sans assistance.</figcaption>
+        </figure>
+
+        <section class="section">
+            <div class="container">
+                <p class="pullquote reveal">Une épreuve de force, tant physique que morale.</p>
+                <div class="prose prose--center reveal">
+                    <p>Impossible de faire le tour de la ville sans parler du mythique Vendée Globe, dont le port des Sables d’Olonne est le point de départ et d’arrivée. Célèbre course autour du monde à la voile en solitaire, sans escale et sans assistance, elle a lieu tous les quatre ans depuis 1989&nbsp;: une trentaine de skippeurs bataillent jour et nuit pendant environ trois mois pour franchir la ligne d’arrivée.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <aside class="author reveal">
+                    <span class="avatar author__avatar" aria-hidden="true">SM</span>
+                    <div>
+                        <h2>Un article de Stéphanie M.</h2>
+                        <p>Je vis à quelques dizaines de kilomètres de ce cadre paradisiaque, mais je suis originaire de Strasbourg. Actuellement en formation pour devenir développeuse web, j’ai créé cette page et ce site avec mes coéquipiers des « Starting Code ».</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section section--sable">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Continuer la lecture</p>
+                    <h2 class="section-title">À découvrir aussi</h2>
+                </div>
+                <div class="cards">
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-yacine/ai-generated-7955585_1920.jpg" alt="" loading="lazy">
+            <span class="card__tag">Gastronomie</span>
+        </div>
+        <div class="card__body">
+            <h3>Shogun Sushi, Chartres</h3>
+            <p>Le premier restaurant japonais de Chartres : sushis, makis et salle traditionnelle où l’on mange assis sur des coussins.</p>
+            <a class="link-arrow" href="fiche-yacine.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-yacine/yacine.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Yacine M.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-daniel/pexels-cottonbro-studio-4828253.jpg" alt="" loading="lazy">
+            <span class="card__tag">Sport</span>
+        </div>
+        <div class="card__body">
+            <h3>La pêche dans l’Aube</h3>
+            <p>Sensibilisation, journées dépollution et pêche « no kill » : la pêche, sport national de l’Aube.</p>
+            <a class="link-arrow" href="fiche-daniel.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-daniel/IMG_1713.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Daniel L.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-julien/IMG_4002.jpg" alt="" loading="lazy">
+            <span class="card__tag">Art</span>
+        </div>
+        <div class="card__body">
+            <h3>Base sous-marine, Bordeaux</h3>
+            <p>Un voyage dans la région bordelaise à travers ses secrets, son histoire, son art et son architecture.</p>
+            <a class="link-arrow" href="fiche-julien.php">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-julien/profil-julien.prv-instagram.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Julien</span>
+        </div>
+    </article>
+</div>
+            </div>
+        </section>
+
     </main>
-    <footer>
-        <div class="footer-central">
-            <div class="logo">
-                <img src="/assets-daniel/logo-the-wild-tour-navbar.png" alt="" width="150">
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" width="150" height="68" loading="lazy">
+                <p>Le blog des bonnes adresses des Wilders, région par région.</p>
             </div>
-            <div class="menssions">
-                <p>Mentions légales <br>
-                Plolitique de confidentialité <br>
-                Conditions d'utilisation</p>
+            <div class="site-footer__col">
+                <h2>Le site</h2>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="decouvertes.php">Découvertes</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
             </div>
-            <div class="blog">
-                <p>A propos <br>
-                Blog</p>
+            <div class="site-footer__col">
+                <h2>Informations</h2>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>Politique de confidentialité</li>
+                    <li>Conditions d'utilisation</li>
+                </ul>
             </div>
         </div>
-        <div class="bas-footer">
-            <p>Boullevard des regions, 96000 WildLand</p>
-        </div>
+        <p class="site-footer__bottom">Boulevard des Régions, 96000 WildLand · © <span data-year>2023</span> The Wild Tour — Starting Code</p>
     </footer>
-    <script src="includes/menu-burger-mobile/menu-burger-mobile.js"></script>
 </body>
 </html>

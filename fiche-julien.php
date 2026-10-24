@@ -1,245 +1,184 @@
+<?php require_once __DIR__ . '/includes/security.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La Base sous-marine de Bordeaux, du bunker de 1941 aux Bassins des Lumières.">
+    <title>Art — Base sous-marine, Bordeaux — The Wild Tour</title>
+    <link rel="icon" href="assets-daniel/logo-the-wild-tour-navbar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700;1,800&display=swap">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="assets-julien/style-julien.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
-    <title>The Wild tour</title>
+    <script src="main.js" defer></script>
 </head>
-
-<body>
-<header class="centrer">
-        <nav class="navbar">
-            <img src="/assets-daniel/logo-the-wild-tour-navbar.png" alt="logo" class="logo">
-            <ul class="list-general">
-                <li class="listeN"><a href="acceuil.html">Accueil</a></li>
-                <li class="listeN"><a href="contact.php">Contact</a></li>
-                <li class="listeN"><a href="decouvertes.php">Découvertes</a><span class="listeN-pointer">&#9660;</span>
-                    <ul class="sousMenu">
-                        <li class="sousListe"><a href="fiche-yacine.html">Gastronomie</a></li>
-                        <li class="sousListe"><a href="fiche-daniel.html">Sport</a></li>
-                        <li class="sousListe"><a href="fiche-julien.php">Art</a></li>
-                        <li class="sousListe"><a href="fiche-stephV.html">Ecologie</a></li>
-                        <li class="sousListe"><a href="fiche_stephM.html">Nature</a></li>
+<body class="page-fiche">
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="accueil.html" class="navbar__brand"><img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" class="navbar__logo" width="219" height="100"></a>
+            <button class="navbar__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu"><span></span></button>
+            <ul class="navbar__menu" id="nav-menu">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li class="has-dropdown">
+                    <a href="decouvertes.php">Découvertes</a>
+                    <button class="dropdown__toggle" type="button" aria-expanded="false" aria-controls="nav-dropdown" aria-label="Afficher les catégories"></button>
+                    <ul class="dropdown" id="nav-dropdown">
+                        <li><a href="fiche-yacine.html">Gastronomie</a></li>
+                        <li><a href="fiche-daniel.html">Sport</a></li>
+                        <li><a href="fiche-julien.php" aria-current="page">Art</a></li>
+                        <li><a href="fiche-stephV.html">Écologie</a></li>
+                        <li><a href="fiche_stephM.html">Nature</a></li>
                     </ul>
                 </li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
-            <div id="icons"></div>
         </nav>
     </header>
 
-    <main>
-        <!--Image principale top et titre -->
-        <section>
-            <h1 class="title-top">Découvertes</h1>
-            <div class="">
-                <img class="img-top" src="\assets-julien\photo-base-sous-marine(123).jpg">
-            </div>
-        </section>
-        <section class="section-center">
-            <div class="description-center">
-                <h2>Base sous-marine, Bordeaux</h2>
-                <!--Partie paragraphe a centrer selon la disposition que l'on souhaite-->
-                <p class="texte">
-                    Construit entre 1941 et 1944 durant la Seconde Guerre mondiale, la Base sous-marine de bordeaux
-                    abritait historiquement des sous-marins allemands pendant la guerre. Ce gigantesque monument de 42
-                    000 m2 mesurent près de 20 mètres de haut. Il pouvait accueillir jusqu'à quinze sous-marins répartis
-                    dans onze bassins couverts.
-                </p>
-            </div>
-        </section>
-        <section class="col-2 gradient-right">
-            <div class="col2-2">
-                <img class="img-square" src="/assets-julien/IMG_4109-2.jpg" ;>
-            </div>
-            <div class="col2-1">
-                <h3>Un monument bordelais</h3>
-                <br>
-                <p class="description-left">Les travaux de construction du bunker auraient nécessité jusqu'à 6 000
-                    travailleurs, des prisonniers de guerre principalement espagnols et portugais. Ils ont travaillé
-                    sans relâche jour et nuit dans des conditions effroyables. Beaucoup sont morts d'épuisement ou
-                    noyés, bien qu'il ne faille pas croire la légende urbaine soutenant que d'autres seraient tombés
-                    dans les fondations du bâtiment où ils auraient péri, prisonniers du béton.
-                </p>
-                <br>
-                <p class="description-left">Vous pourrez observer à la Base sous-marine le mémorial qui a été
-                    érigé en hommage à ceux qui ont pris part à la construction, et en particulier à ceux qui y ont
-                    laissé leur vie.
-                </p>
-                <br>
-                <p class="description-left"> Ce lieu offre aujourd'hui un espace culturel dédié à la création
-                    contemporaine. Désormais, l'espace s'est policé pour faire naître un nouveau lieu peuplé d'une
-                    étrange poésie contemporaine. Allez visiter ses espaces hors norme et bruts où il règne une ambiance
-                    particulière. Le décor abrupt ne vous laissera pas indifférent.
-                </p>
-            </div>
-        </section>
-        <section class="section-center">
-            <div class="description-center">
-                <p class="texte">
-                    Ce lieu atypique est un lieu d’exposition depuis 2000. Il met à l’honneur une programmation
-                    pluridisciplinaire avec des expositions temporaires, et des événements aux genres éclectiques. Les
-                    expositions ont en général une forte identité tournée vers le numérique et la culture électronique
-                    telles que l’exposition “Digitale Abysse” ou encore l’exposition “Nobody knew you’re a dog” de
-                    Romain Tardy mêlant projections et installations lumineuses. Le lieu organise également des
-                    événements dédiés à la culture urbaine avec par exemple l’exposition “Légendes urbaines” qui mettait
-                    à l’honneur le street-art.
-                </p>
-                <br>
-                <p class="texte">
-                    Les œuvres des expositions mettent maintes fois en lumière des problématiques contemporaines sur des
-                    questions sociétales d’hyper-connectivité, d’inégalités sociales ou encore sur les ravages de la
-                    mondialisation. On y retrouve entre-autre l’exposition Medio Acqua traitant la problématique de
-                    l’eau sous toutes ses formes, entraînant voyage et réflexion.
-                </p>
+    <main id="contenu">
+        <section class="hero">
+            <img class="hero__img" src="assets-julien/photo-base-sous-marine(123).jpg" alt="">
+            <div class="hero__content">
+                <p class="eyebrow">Art · Bordeaux</p>
+                <h1 class="hero__title">Base sous-marine</h1>
+                <div class="hero__meta">
+                    <img src="assets-julien/profil-julien.prv-instagram.jpg" alt="">
+                    <span>Par Julien</span>
+                </div>
             </div>
         </section>
 
-        <section>
-            <div>
-                <img class="img-paysage" src=" /assets-julien/expo-dali-gaudi-bordeaux.jpg" ;>
+        <section class="section">
+            <div class="container section-head reveal">
+                <p class="eyebrow">Un lieu chargé d’histoire</p>
+                <h2 class="section-title">Base sous-marine, Bordeaux</h2>
+                <hr class="divider">
+                <p>Construite entre 1941 et 1944 durant la Seconde Guerre mondiale, la Base sous-marine de Bordeaux abritait des sous-marins allemands. Ce gigantesque monument de 42&nbsp;000&nbsp;m² mesure près de 20 mètres de haut et pouvait accueillir jusqu’à quinze sous-marins répartis dans onze bassins couverts.</p>
             </div>
         </section>
 
-        <section class="section-left">
-            <div class="description-left">
-                <p class="texte">
-                    Dès 2020, la Base rebaptisée « Bassins des lumières » rouvrit ses portes dans le cadre d’un projet
-                    de centre numérique, au demeurant le plus important au monde. Utilisant quatre des onze bassins
-                    d’origine que compte le lieu, il y est désormais projeté sur 12 000 m2 ce que l’on appelle des «
-                    expositions immersives » qui par un jeu d’images vous transportent vers d’autres lieux ou époques à
-                    travers notamment les oeuvres de grands peintes ou artistes. C’est ainsi que depuis son ouverture,
-                    l’ancienne base a rendu hommage à Gustav Klimt, Monet, Renoir, à l’art vénitien et à quelques autres
-                    thématiques. Et à chaque fois un rendu remarquable et magique qui font que l’on ne regrette pas la
-                    visite…
-                </p>
+        <section class="bleed">
+            <div class="bleed__text reveal">
+                <p class="eyebrow">Mémoire</p>
+                <h2>Un monument bordelais</h2>
+                <div class="prose">
+                    <p>Les travaux de construction du bunker auraient nécessité jusqu’à 6&nbsp;000 travailleurs, principalement des prisonniers de guerre espagnols et portugais. Ils ont travaillé sans relâche, jour et nuit, dans des conditions effroyables. Beaucoup sont morts d’épuisement ou noyés, même s’il ne faut pas croire la légende urbaine selon laquelle d’autres seraient tombés dans les fondations, prisonniers du béton.</p>
+                    <p>Vous pourrez observer à la Base sous-marine le mémorial érigé en hommage à ceux qui ont pris part à la construction, et en particulier à ceux qui y ont laissé leur vie.</p>
+                    <p>Ce lieu offre aujourd’hui un espace culturel dédié à la création contemporaine, peuplé d’une étrange poésie. Allez visiter ses espaces hors norme et bruts où règne une ambiance particulière&nbsp;: le décor abrupt ne vous laissera pas indifférent.</p>
+                </div>
+            </div>
+            <div class="bleed__media reveal">
+                <img src="assets-julien/IMG_4109-2.jpg" alt="Bassin intérieur de la Base sous-marine" loading="lazy">
             </div>
         </section>
 
-        <!-- Articles de la même catégorie -->
-
-        <section class="centrer">
-            <h3 class="card__h3">Autres articles</h3>
+        <section class="section">
             <div class="container">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="assets-daniel/pexels-cottonbro-studio-4828253.jpg" alt="card__image" class="card__image" width="600">
-                    </div>
-                    <div class="card__body">
-                        <h4>La pêche dans l’Aube</h4>
-                        <p>La pêche dans l’aube est un peu le sport national de la région, avec tout les étangs et tous les plans d’eau</p>
-                        <a class="card__button" href="">Lire plus...</a>
-                    </div>
-                    <div class="card__footer">
-                        <div class="user">
-                            <img src="\assets-daniel\IMG_1713.jpg" alt="user__image" class="user__image">
-                            <div class="user__info">
-                                <h5>Daniel L.</h5>
-                                <small></small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img src="\assets-julien\photo-base-sous-marine(123).jpg" alt="card__image" class="card__image" width="600">
-                    </div>
-                    <div class="card__body">
-
-                        <h4>Base sous-marine, Bordeaux</h4>
-                        <p>Cet article vous fera voyager dans la région Bordelaise avec ses secrets, ses histoires ainsi que que son art et architechture.</p>
-                        <a class="card__button">Lire plus...</a>
-                    </div>
-                    <div class="card__footer">
-                        <div class="user">
-                            <img src="\assets-julien\profil-julien.prv-instagram.jpg" alt="user__image" class="user__image">
-                            <div class="user__info">
-                                <h5>Julien</h5>
-                                <small></small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card__header">
-                        <img src="assets-stephV/pexels-sarah-chai-7263016.jpg" alt="card__image" class="card__image" width="600">
-                    </div>
-                    <div class="card__body">
-                        <h4>L'écologie dans nos régions</h4>
-                        <p>Un petit tour d'horizon libournais sur les actions écoresponsables</p>
-                        <a class="card__button" href="">Lire plus...</a>
-                    </div>
-                    <div class="card__footer">
-                        <div class="user">
-                            <img src="\assets-stephV\photostephV.jpg" alt="user__image" class="user__image">
-                            <div class="user__info">
-                                <h5>Stéphanie V.</h5>
-                                <small></small>
-                            </div>
-                        </div>
-                    </div>
+                <div class="prose prose--center reveal">
+                    <p>Ce lieu atypique accueille des expositions depuis 2000. Il met à l’honneur une programmation pluridisciplinaire, avec des expositions temporaires et des événements aux genres éclectiques. Les expositions ont souvent une forte identité tournée vers le numérique et la culture électronique, comme « Digitale Abysse » ou « Nobody knew you’re a dog » de Romain Tardy, mêlant projections et installations lumineuses. Le lieu organise aussi des événements dédiés à la culture urbaine, comme l’exposition « Légendes urbaines » consacrée au street-art.</p>
+                    <p>Les œuvres mettent souvent en lumière des problématiques contemporaines&nbsp;: hyper-connectivité, inégalités sociales ou ravages de la mondialisation. On y retrouve entre autres l’exposition Medio Acqua, qui traite de l’eau sous toutes ses formes, entre voyage et réflexion.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Articles récents PHP 
+        <figure class="wide-figure reveal">
+            <img src="assets-julien/expo-dali-gaudi-bordeaux.jpg" alt="Exposition immersive Dalí et Gaudí aux Bassins des Lumières" loading="lazy">
+            <figcaption>Exposition immersive Dalí et Gaudí aux Bassins des Lumières.</figcaption>
+        </figure>
 
-        <?php include 'assets-julien/articles.php'; ?>
-
-        <section class="articles-recents">
-            <h3 class="article-h3">Les articles récents</h3>
-            <hr>
-            <div class="article-col2">
-                <?php foreach ($article as $contenu) : ?>
-                    <?php foreach ($contenu as $topic) : ?>
-                        <div class="article-col2-1">
-                            <img class="article-img" src="assets-julien/<?= $topic['image']; ?>" alt="<?= $topic['titre']; ?>">
-                        </div>
-                        <div class="article-col2-2">
-                            <h4>
-                                <?= $topic['titre']; ?>
-                            </h4>
-                            <p>
-                                <?= $topic['description']; ?>
-                            </p>
-                            <button class="button-lire-plus"><a href="<?= $topic['url']; ?>">Lire plus...</a></button>
-                        </div>
-                    <?php endforeach; ?>
-                <?php endforeach; ?>
+        <section class="section">
+            <div class="container">
+                <p class="pullquote reveal">Dès 2020, la Base rebaptisée « Bassins des Lumières » devient le plus grand centre d’art numérique au monde.</p>
+                <div class="prose prose--center reveal">
+                    <p>Utilisant quatre des onze bassins d’origine, le lieu projette sur 12&nbsp;000&nbsp;m² des « expositions immersives » qui, par un jeu d’images, vous transportent vers d’autres lieux ou d’autres époques à travers les œuvres de grands peintres. Depuis son ouverture, l’ancienne base a rendu hommage à Gustav Klimt, Monet, Renoir ou encore à l’art vénitien. À chaque fois, un rendu remarquable et magique&nbsp;: on ne regrette pas la visite.</p>
+                </div>
             </div>
-        </section>-->
+        </section>
+
+        <section class="section section--sable">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Continuer la lecture</p>
+                    <h2 class="section-title">Autres articles</h2>
+                </div>
+                <div class="cards">
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-yacine/ai-generated-7955585_1920.jpg" alt="" loading="lazy">
+            <span class="card__tag">Gastronomie</span>
+        </div>
+        <div class="card__body">
+            <h3>Shogun Sushi, Chartres</h3>
+            <p>Le premier restaurant japonais de Chartres : sushis, makis et salle traditionnelle où l’on mange assis sur des coussins.</p>
+            <a class="link-arrow" href="fiche-yacine.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-yacine/yacine.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Yacine M.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-daniel/pexels-cottonbro-studio-4828253.jpg" alt="" loading="lazy">
+            <span class="card__tag">Sport</span>
+        </div>
+        <div class="card__body">
+            <h3>La pêche dans l’Aube</h3>
+            <p>Sensibilisation, journées dépollution et pêche « no kill » : la pêche, sport national de l’Aube.</p>
+            <a class="link-arrow" href="fiche-daniel.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <img src="assets-daniel/IMG_1713.jpg" alt="" width="40" height="40" loading="lazy">
+            <span>Daniel L.</span>
+        </div>
+    </article>
+    <article class="card reveal">
+        <div class="card__media">
+            <img src="assets-daniel/chris-abney-gvb84QdErNs-unsplash.jpg" alt="" loading="lazy">
+            <span class="card__tag">Écologie</span>
+        </div>
+        <div class="card__body">
+            <h3>Le Libournais écoresponsable</h3>
+            <p>Un tour d’horizon libournais des acteurs qui réparent, recyclent et revalorisent au quotidien.</p>
+            <a class="link-arrow" href="fiche-stephV.html">Lire l’article</a>
+        </div>
+        <div class="card__footer">
+            <span class="avatar" aria-hidden="true">SV</span>
+            <span>Stéphanie V.</span>
+        </div>
+    </article>
+</div>
+            </div>
+        </section>
 
     </main>
 
-    <footer>
-            <div class="footer-central">
-                <div class="logo">
-                    <img src="/assets-daniel/logo-the-wild-tour-navbar.png" alt="" width="150">
-                </div>
-                <div class="menssions">
-                    <p>Mentions légales <br>
-                    Plolitique de confidentialité <br>
-                    Conditions d'utilisation</p>
-                </div>
-                <div class="blog">
-                    <p>A propos <br>
-                    Blog</p>
-                </div>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__brand">
+                <img src="assets-daniel/logo-the-wild-tour-navbar.png" alt="The Wild Tour" width="150" height="68" loading="lazy">
+                <p>Le blog des bonnes adresses des Wilders, région par région.</p>
             </div>
-            <div class="bas-footer">
-                <p>Boullevard des regions, 96000 WildLand</p>
+            <div class="site-footer__col">
+                <h2>Le site</h2>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="decouvertes.php">Découvertes</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
             </div>
-        </footer>
-        <script src="includes/menu-burger-mobile/menu-burger-mobile.js"></script>
+            <div class="site-footer__col">
+                <h2>Informations</h2>
+                <ul>
+                    <li>Mentions légales</li>
+                    <li>Politique de confidentialité</li>
+                    <li>Conditions d'utilisation</li>
+                </ul>
+            </div>
+        </div>
+        <p class="site-footer__bottom">Boulevard des Régions, 96000 WildLand · © <span data-year>2023</span> The Wild Tour — Starting Code</p>
+    </footer>
 </body>
-
 </html>

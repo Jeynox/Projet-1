@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.css">
+    <meta name="description" content="The Wild Tour, le blog des bonnes adresses des Wilders : gastronomie, sport, art, écologie et nature.">
+    <title>The Wild Tour</title>
+    <link rel="icon" href="assets-daniel/logo-the-wild-tour-navbar.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <title>The Wild Tour</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700;1,800&display=swap">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!--Partie titre avec annimations JS-->
-    <section id="titre-mouv" class="title">
-        <section class="title-up">
-            <h1><span>The </span> <span>Wild </span> <span>Tour </span> <br>
-        </section>
-    </section>
-        <!--Deux boutons animés avec :hover (a definir le resultat)-->
-    <section class="boutons">
-        <button><a href="/acceuil.html">Accueil</a></button>
-        <button><a href="/contact.php">Contact</a></button>
-    </section>
+<body class="landing">
+    <main class="landing__inner">
+        <img class="landing__logo" src="assets-daniel/logo-the-wild-tour-navbar.png" alt="" width="219" height="100">
+        <h1 class="landing__title"><span>The</span> <span>Wild</span> <span>Tour</span></h1>
+        <p class="landing__lead">Le blog où les Wilders partagent les bonnes adresses et les plus beaux endroits de leur région.</p>
+        <nav class="landing__actions" aria-label="Entrer sur le site">
+            <a class="btn btn--accent" href="accueil.html">Accueil</a>
+            <a class="btn btn--ghost btn--no-arrow" href="contact.php">Contact</a>
+        </nav>
+    </main>
 </body>
 </html>
